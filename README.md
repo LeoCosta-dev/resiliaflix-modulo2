@@ -1,13 +1,15 @@
 # Projeto Resília Flix
 
 ## Orientações para os desenvolvedores:
-
+#
+## Favor não mexa na main sem prévia concordancia de todos os membros do grupo!
+#
 ### Comandos git para o desenvolvimento por ramos!
 #
 #
 #### Fazer antes mesmo de começar a mexer no projeto:
 
-1 - git checkout interface (entra na branch referente a sua parte no projeto) </br>
+1 - git checkout 'nome da sua branch sem aspas' (entra na branch referente a sua parte no projeto) </br>
 2 - git pull (para atualizar todos os seus arquivos locais com o que já foi feito e uppado para o github)
 #
 #
