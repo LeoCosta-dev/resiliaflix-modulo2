@@ -1,7 +1,9 @@
 # Projeto Resília Flix
 
 ## Orientações para os desenvolvedores:
-
+#
+## Favor não mexa na main sem prévia concordancia de todos os membros do grupo!
+#
 ### Comandos git para o desenvolvimento por ramos!
 #
 #
