@@ -1,8 +1,9 @@
 let cep = document.getElementById("cep")
+let reset
 
 cep.addEventListener("blur", () => {
     if (cep.value == "") {
-        document.getElementById("rua").value =""
+        document.getElementById("rua").value = ""
         document.getElementById("cidade").value = ""
         document.getElementById("uf").value = ""
         document.getElementById("bairro").value = ""
@@ -23,3 +24,11 @@ cep.addEventListener("blur", () => {
         )
     }
 })
+
+reset = document.createElement("script")
+reset.textContent = `cep.value=""
+         document.getElementById("rua").value = ""
+         document.getElementById("cidade").value = ""
+         document.getElementById("uf").value = ""
+         document.getElementById("bairro").value =""`
+document.querySelector("html").appendChild(reset)
