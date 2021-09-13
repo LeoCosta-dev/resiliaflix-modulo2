@@ -1,10 +1,12 @@
-let cep = 25213320
+let cep = document.getElementById("cep")
 
-$.ajax({
-    
-    url: "https://viacep.com.br/ws/"+ cep +"/json/",
-    method: "get",
-    success: function (response) {
-        console.log(response)
-    }
-});
+cep.addEventListener("blur", () => {
+  return  $.ajax({
+
+        url: "https://viacep.com.br/ws/" + cep.value + "/json/",
+        method: "get",
+        success: function (response) {
+            console.log(response)
+        }
+    });
+})
