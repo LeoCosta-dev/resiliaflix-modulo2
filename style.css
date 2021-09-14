@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(46, 45, 45);
+    
+}
+header{
+border-radius: 100px;
+box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(231, 199, 18);
+
+}
