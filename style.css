@@ -1,3 +1,33 @@
-div {
-    position: absolute;
+
+    html, body { width: 100%;
+        height: 100%;
+        background-color: rgb(46, 45, 45);
+         
+}
+
+.container {
+width: 100%;
+height: 100%;
+display: flex ;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+h1  {
+font-family: 'Sarabun', sans-serif;
+color: white;
+font-size: 60px
+}
+p {
+    color: white;
+}
+input {
+    width: 300px;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.botao{
+    color: red;
 }
