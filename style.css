@@ -2,8 +2,51 @@ body{
     background-color: rgb(46, 45, 45);
     
 }
+
 header{
 border-radius: 100px;
 box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(231, 199, 18);
+}
 
+.container1{
+    width: 100%;
+    height: 100%;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#box{
+    display: flex;
+    padding-top: 10%;
+    width: 90%;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.container2{
+    background-color:#212529;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 30%;
+    height: 300px;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+h1{
+font-family: 'Sarabun', sans-serif, 2px;
+color: white
+}
+p {
+    color: white;
+}
+input {
+    width: 300px;
+    padding: 6px;
 }
