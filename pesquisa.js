@@ -14,25 +14,28 @@ let botao=document.querySelector('#btn')
 let texto=document.querySelector('#input')
 let api=''
 
-botao.addEventListener('click',function(){
-    if(texto.value==filme)
-
-
-})
-api =$.ajax({
+if(document.querySelector('#btn')){
+    botao.addEventListener('click',function(){
+        if(texto.value==filme){}
     
-    url: `http://www.omdbapi.com/?i=${Catalogo[filme]}&apikey=e1026f57`,
-    method: "get",
-    success: mostrar(api)
+    
+    })
+    api =$.ajax({
+        
+        url: `http://www.omdbapi.com/?i=${Catalogo[filme]}&apikey=e1026f57`,
+        method: "get",
+        success: mostrar(api)
+        }
+    );
+    
+    
+    
+    function mostrar(objeto){
+    
+        imagem.innerHTML=`<h1>${objeto.title}</h1><p>${objeto.explanation}</p>
+        <img src="${objeto.url}" alt="${objeto.title}">`
+    
+        
     }
-});
 
-
-
-function mostrar(objeto){
-
-    imagem.innerHTML=`<h1>${objeto.title}</h1><p>${objeto.explanation}</p>
-    <img src="${objeto.url}" alt="${objeto.title}">`
-
-    
 }
