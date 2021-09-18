@@ -1,0 +1,94 @@
+
+* {
+    box-sizing: border-box;
+    
+}
+
+ p{
+     text-align: center;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+
+  }
+.form-inline {
+    width: 950px;
+    height: 800;
+    background-color: whitesmoke;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    size: 10px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    column-count: 3;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+   
+}
+
+input[type=text]{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #999;
+    outline: 0;
+}
+input[type=email]{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #999;
+    outline: 0;
+}
+
+input[type=password]{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #999;
+    outline: 0;
+}
+
+input [type=pwd]{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #999;
+    outline: 0;
+}
+input[type=number]{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #999;
+    outline: 0;
+}
+
+select{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #999;
+    outline: 0;
+}
+
+input[input=submit]{
+    padding: 10px;
+    border: 1px solid #999;
+    background: #ddd;
+}
+input[input=submit]:hover{
+    background-color:rebeccapurple;
+}
+
+
+
+.cadastrar{
+    width: 350px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color:yellow;
+    font-size: 18px;
+}

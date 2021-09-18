@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastra-se já!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+    defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+    defer></script>
+  <script src="cep.js" defer></script>
+  <script src="pesquisa.js" defer></script>
+  <script src="validacoes.js" defer></script>
+</head>
+
+<body>
+  <p> Crie uma conta na Resilia Flix</p>
+  <div class="form-inline">
+
+    <div>
+      <label for="nome">Nome:</label>     
+    <input id="nome" type="text" placeholder="Digite seu Nome">
+    <label for="number">RG:</label>
+        <input type="number" placeholder="XX.XXX.XXX-X">
+        <label for="email">E-mail:</label>
+    <input id="email1" type="email" placeholder="Digite seu e-mail">
+  </div> 
+  
+  
+  <div>
+    <label for="password">Senha:</label>
+    <input id="password" type="password" placeholder="Digite sua senha">
+    <label for="text">Confirme sua senha:</label>
+    <input id="password" type="password" placeholder="Senha">
+    <label for="cep">CEP</label>
+   <input id="cep" type="number" re />
+   <label for="cidade">Cidade</label>
+    <input id="cidade" type="text" required />
+    </div>
+<div>
+    <label for="uf">Estado</label>
+      <select id="uf">
+      <option value="AC">Acre</option>
+      <option value="AL">Alagoas</option>
+      <option value="AP">Amapá</option>
+      <option value="AM">Amazonas</option>
+      <option value="BA">Bahia</option>
+      <option value="CE">Ceará</option>
+      <option value="DF">Distrito Federal</option>
+      <option value="ES">Espírito Santo</option>
+      <option value="GO">Goiás</option>
+      <option value="MA">Maranhão</option>
+      <option value="MT">Mato Grosso</option>
+      <option value="MS">Mato Grosso do Sul</option>
+      <option value="MG">Minas Gerais</option>
+      <option value="PA">Pará</option>
+      <option value="PB">Paraíba</option>
+      <option value="PR">Paraná</option>
+      <option value="PE">Pernambuco</option>
+      <option value="PI">Piauí</option>
+      <option value="RJ">Rio de Janeiro</option>
+      <option value="RN">Rio Grande do Norte</option>
+      <option value="RS">Rio Grande do Sul</option>
+      <option value="RO">Rondônia</option>
+      <option value="RR">Roraima</option>
+      <option value="SC">Santa Catarina</option>
+      <option value="SP">São Paulo</option>
+      <option value="SE">Sergipe</option>
+      <option value="TO">Tocantins</option>
+    </select>
+    <label for="bairro">Bairro</label>
+    <input id="bairro" type="text" required />
+    <label for="rua">Rua</label>
+    <input id="rua" type="text" required />
+     <label for="numero">Número</label>
+    <input id="numero" type="text" />
+     <label for="complemento">Complemento</label>
+    <input id="complemento" type="text" />
+    </div>
+  <div id="botao">
+    <input type="submit" name="botao" value="CADASTRAR" class="cadastrar" />  
+ </div>
+           
+  </div>
+ 
+
+
+
+</body>
+
+</html>
