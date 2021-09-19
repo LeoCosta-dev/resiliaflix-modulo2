@@ -58,7 +58,7 @@ botao.addEventListener('click',function(){
 })
 
 function mostrar(objeto){
-        try{
+        // try{
             
             if(objeto.Type!='game'){
                 if(objeto.Poster=='N/A'){
@@ -86,13 +86,13 @@ function mostrar(objeto){
             }
             // throw "Uncaught TypeError"
         }
-        catch(error){
-            console.log('errei')
-            imagem.innerHTML='<h2>Filme não encontrado</h2>'
+        // catch(error){
+        //     console.log('errei')
+        //     imagem.innerHTML='<h2>Filme não encontrado</h2>'
             
-        }
+        // }
     
-        }
+        // }
 
     
  
