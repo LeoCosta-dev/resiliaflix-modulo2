@@ -1,59 +1,54 @@
-// let Catalogo={'O Auto da Compadecida':'tt0271383'
-// ,"Batman O cavaleiro das trevas":'tt2098632'
-// ,"O Poderoso Chefão":'tt0068646'
-// ,"O Pianista":'tt0253474'
-// ,"Trainspotting":'tt0117951'
-// ,"Hannibal":'tt0212985'
-// ,"Invictus":'tt1057500'
-// ,"2 Coelhos":'tt1753722'}
-
-// let filme=Object.keys(Catalogo)
-
+// capturando as tags da imagem do botao e da entrada de texto 
 let imagem=document.querySelector('#imagem')
 let botao=document.querySelector('#btn')
 let texto=document.querySelector('#input')
-git
-if(document.querySelector('#btn')){
-    botao.addEventListener('click',function(){
-        if(texto.value==filme){}
-    
-    
-    })
-    api =$.ajax({
-        
-        url: `http://www.omdbapi.com/?i=${Catalogo[filme]}&apikey=e1026f57`,
-        method: "get",
-        success: mostrar(api)
-        }
-    );
-    
-    
-    
-    function mostrar(objeto){
-    
-        imagem.innerHTML=`<h1>${objeto.title}</h1><p>${objeto.explanation}</p>
-        <img src="${objeto.url}" alt="${objeto.title}">`
-    
-        
-    }
+
+var Catalogo=['tt0271383','tt0180093','tt0212985','tt1753722','tt1057500','tt0068646','tt0117951','tt1039960','tt0034583','tt0133093','tt0469494','tt0246578']
+
+    for(let i=0;i<Catalogo.length;i++){
+        $.ajax({
+                
+            url: `http://www.omdbapi.com/?i=${Catalogo[i]}&apikey=e1026f57`,
+            method: "post",
+            success: (response)=>{
+                
+
+            imagem.innerHTML+=
+            `<div class="col-md-3">
+            <div class='well text-center'>
+            <img src="${response.Poster}" alt="${response.Title}">
+            <h5>${response.Title}</h5> 
+            <p><button type="button" class="btn btn-primary">Detalhes</button></p>
+            </div>
+            </div>`
+              
+
+            }
+           
+                    })
 
 }
 
+    
+
+
+
+
+// ao clicar no botao é feita a requisição com o parâmetro s da Api, assim é retornado vários resultados correspondentes ao nome que é q passado, em seguida é feito um for para executar a função mostrar em todos os filmes do array retornado pela api
+
 botao.addEventListener('click',function(){
-    console.log("cliquei")
 
              $.ajax({
                 
                 url: `http://www.omdbapi.com/?s=${texto.value}&apikey=e1026f57`,
-                method: "get",
+                method: "post",
                 success: (response)=>{
+                    
                     console.log(response['Search'])
 
-                    // for(let i=0;i<response.Array.length;i++)
-                    //     for(let j=0;j<Array.Search.length;j++)
-                            
-                    // mostrar(Array.Search[i][j])
+                imagem.innerHTML=''
                    for(let i=0;i<response['Search'].length;i++)
+                   
                     mostrar(response['Search'][i])
 
                 }
@@ -62,16 +57,42 @@ botao.addEventListener('click',function(){
 
 })
 
-
-
-
 function mostrar(objeto){
+        // try{
+            
+            if(objeto.Type!='game'){
+                if(objeto.Poster=='N/A'){
+                    imagem.innerHTML+=`
+                <div class="col-md-3">
+                <div class='well text-center'>
+                <div>Imagem não encontrada</div>
+                <h5>${objeto.Title}</h5> 
+                <p><button type="button" class="btn btn-primary">Detalhes</button></p>
+                </div>
+                </div>`}
+                    
+               
+                else{
+                
+                imagem.innerHTML+=`
+                <div class="col-md-3">
+                <div class='well text-center'>
+                <img src="${objeto.Poster}" alt="${objeto.Title}">
+                <h5>${objeto.Title}</h5> 
+                <p><button type="button" class="btn btn-primary">Detalhes</button></p>
+                </div>
+                </div>`
+                }
+            }
+            // throw "Uncaught TypeError"
+        }
+        // catch(error){
+        //     console.log('errei')
+        //     imagem.innerHTML='<h2>Filme não encontrado</h2>'
+            
+        // }
     
-        
-        imagem.innerHTML+=`<h1>${objeto.Title}</h1><p>${objeto.Year}</p>
-        <img src="${objeto.Poster}" alt="${objeto.Title}">`
-    console.log('eita!')
-    }
+        // }
 
     
  
