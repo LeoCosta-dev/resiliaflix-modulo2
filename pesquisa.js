@@ -7,30 +7,40 @@ let texto=document.querySelector('#input')
 
 // ao clicar no botao é feita a requisição com o parâmetro s da Api, assim é retornado vários resultados correspondentes ao nome que é q passado, em seguida é feito um for para executar a função mostrar em todos os filmes do array retornado pela api
 
+
+
+
+
+
+
 texto.addEventListener('keyup',function(){
 
              $.ajax({
                 
                 url: `http://www.omdbapi.com/?s=${texto.value}&apikey=e1026f57`,
                 method: "get",
-                error:( exception)=>{if (exception=='Uncaught TypeError')
-                    imagem.innerHTML='<h2>Filme não encontrado</h2>'
-
-                },
+               
                 success: (response)=>{
                     
-                    console.log(response['Search'])
+                    console.log(response)
 
-                imagem.innerHTML=''
+                    imagem.innerHTML=''
+                    if(response['Response']=='False'){
+                     imagem.innerHTML='<h2>Filme não encontrado</h2>'
+                    }
+                    else{
                    for(let i=0;i<response['Search'].length;i++)
                    
                     mostrar(response['Search'][i])
+                   }
+                    
 
                 }
                
                         })
-
+                        
 })
+
 
 function mostrar(objeto){
         
