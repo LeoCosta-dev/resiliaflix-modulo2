@@ -18,23 +18,94 @@
     <script src="cep.js" defer></script>
     <script src="pesquisa.js" defer></script>
     <script src="validacoes.js" defer></script>
+    <style>
+header {
+    border-radius: 100px;
+box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(248, 147, 14);
+width: 98%;
+position: fixed;
+}
+.container1{
+    width: 100%;
+    height: 100%;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ocontainer{
+        background-color:#212529;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 30%;
+        height: 350px;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10%;
+
+    }
+#continuar{
+    background-color: #FFC107;
+    font-size: 20px;
+    width: 150px;
+    border: none;
+    color: black;
+}
+input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 7px;
+    border: none
+}
+
+    </style>
 </head>
 <body>
-    <body>
-        <div class="container">
-          
-            <h1>Resilia Flix</h1>
-            <input id="senha" type="text"  placeholder="Digite seu e-mail">
-            <br>
-            <input id="senha" type="password"  placeholder="Digite sua senha">
-            <p> Esqueceu a sua <a href="">senha?<p></a></p>
-             <button id="continuar" type="button" class="btn btn-lg btn-primary" disabled>Continuar</button>
-            
-            <p>Não tem Resilia Flix?<a href=""> Assine já!</a></p>
-            
-        
+
+    <div class="b-example-divider"></div>
+
+    <header class="p-3 bg-dark text-white">
+      <div class="container1">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Filmes</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Minha lista</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Assista de novo</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Contato</a></li>
+          </ul>
+  
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..." aria-label="Search">
+          </form>
+  
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <button type="button" class="btn btn-warning">Assine</button>
+          </div>
         </div>
-    
-   
+      </div>
+    </header>
+
+
+
+
+            <div class="ocontainer">
+            <h1 >Resilia Flix</h1>
+            <input id="asenha" type="text"  placeholder="Digite seu e-mail">
+            <br>
+            <input id="asenha" type="password"  placeholder="Digite sua senha">
+            <p> Esqueceu a sua <a href="">senha?<p></a></p>
+             <button id="continuar" type="button" class="btn btn-lg btn-primary" >Continuar</button>
+            <br>
+             <p>Não tem Resilia Flix?<a href=""> Assine já!</a></p>
+        </div> 
+
 </body>
 </html>

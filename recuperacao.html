@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResiliaFlix | Recuperação</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
-    <script src="cep.js" defer></script>
-    <script src="pesquisa.js" defer></script>
-    <script src="validacoes.js" defer></script>
-</head>
-<body>
-    <div class="b-example-divider"></div>
 
-    <header class="p-3 bg-dark text-white">
-      <div class="container1">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-          </a>
-  
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Filmes</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Minha lista</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Assista de novo</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Contato</a></li>
-          </ul>
-  
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-            <input type="search" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..." aria-label="Search">
-          </form>
-  
-          <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">Login</button>
-            <button type="button" class="btn btn-warning">Assine</button>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResiliaFlix | Recuperação</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+    defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+    defer></script>
+  <script src="cep.js" defer></script>
+  <script src="pesquisa.js" defer></script>
+  <script src="validacoes.js" defer></script>
+</head>
+
+<body>
+  <div class="b-example-divider"></div>
+  <header class="p-3 bg-dark text-white">
+    <div class="container1">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <img class="logo" src="poplogo.png" alt="logo">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Filmes</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Minha lista</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Assista de novo</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Contato</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..."
+            aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Assine</button>
         </div>
       </div>
-    </header>
-    <main id="box">
-        <div class="container2">
+    </div>
+  </header>
+  <main id="box">
+    <div class="container2">
 
-            <h1>Recupere a sua senha</h1>
-            <input id="email" type="text" placeholder="Digite seu e-mail">
-            <button id="recupera" type="button" class="btn btn-warning">Warning</button>
-            
+      <h1>Recupere a sua senha</h1>
+      <input id="email" type="text" placeholder="Digite seu e-mail">
+      <button id="recupera" type="button" class="btn btn-warning">Warning</button>
 
 
-        </div>
-    </main>
+
+    </div>
+  </main>
 </body>
+
 </html>

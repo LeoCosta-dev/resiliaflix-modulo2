@@ -3,10 +3,15 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-image: url(pipocas.png);
+    background-size: cover;
     
     
 }
+.logo{
+    width: 100px;
 
+}
 header{
 border-radius: 100px;
 box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(248, 147, 14);
@@ -58,3 +63,81 @@ input {
     width: 300px;
     padding: 6px;
 }
+    body{
+        background-color: rgb(46, 45, 45);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+    
+    }
+    
+    header{
+    border-radius: 100px;
+    box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(248, 147, 14);
+    width: 98%;
+    position: fixed;
+    }
+    
+    .container1{
+        width: 100%;
+        height: 100%;
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    #box{
+        display: flex;
+        padding-top: 10%;
+        width: 90%;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    
+    }
+    
+    .container2{
+        background-color:#212529;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 30%;
+        height: 300px;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 5%;
+    
+    }
+    h1{
+    font-family: 'Sarabun', sans-serif, 2px;
+    color: white
+    }
+    p {
+        color: white;
+    }
+    input {
+        width: 300px;
+        padding: 6px;
+    }
+
+    .ocontainer{
+        background-color:#212529;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 30%;
+        height: 350px;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 5%;
+
+    }
+
+    .primeiro {
+        color: white;
+    }
