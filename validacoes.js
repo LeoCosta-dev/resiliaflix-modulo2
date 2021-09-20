@@ -51,3 +51,14 @@ if(inputEmail){
         }
     })
 }
+
+document.getElementById('home').addEventListener('click', ()=>{
+    location.replace('index.html')
+})
+document.getElementById('filmes').addEventListener('click', ()=>{
+    location.replace('pesquisa.html')
+})
+$('#MinhaLista')
+document.getElementById('contato').addEventListener('click', ()=>{
+    location.replace('pesquisa.html')
+})
