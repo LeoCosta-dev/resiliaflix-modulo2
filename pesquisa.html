@@ -12,14 +12,29 @@
     .container{
         padding-top: 150px;
      }
-     .container1{
-        background-color: rgb(46, 45, 45);
-     }
+     
      header{
         background-color: rgb(46, 45, 45);
      }
+     #imagem{
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 90%;
+      padding: 10px;
+      border-radius: 20px;
+     }
+     h5{
+       color: white;
+     }
+     #erro{
+       color: red;
+       height: 300px;
+       background-image:url(poplogo.png);
+     }
+     header{
+       position:static;
+     }
     </style>
-    <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css"> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
@@ -49,7 +64,7 @@
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..."
+          <input type="search" id="input" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..."
             aria-label="Search">
         </form>
 
@@ -61,12 +76,7 @@
     </div>
   </header>
   
-    <div id='alinha'>
-        <label for="">Busca:</label>
-    <input type="text" id='input'>
-    <a href="home.html">Voltar</a>
-    <!-- <button id='btn'>Buscar</button> -->
-    </div>
+   
     <div class='container'>
 
     </div>

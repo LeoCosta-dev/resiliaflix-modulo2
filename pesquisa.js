@@ -40,7 +40,7 @@ function mostrar(objeto){
                     imagem.innerHTML+=`
                 <div class="col-md-3">
                 <div class='well text-center'>
-                <div>Imagem não encontrada</div>
+                <div id="erro" >Imagem não encontrada</div>
                 <h5>${objeto.Title}</h5> 
                 <p><button type="button" class="btn btn-primary">Detalhes</button></p>
                 </div>
