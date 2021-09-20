@@ -69,36 +69,36 @@ var Catalogo=['tt0271383','tt0180093','tt0212985','tt1753722','tt1057500','tt006
 // ao clicar no botao é feita a requisição com o parâmetro s da Api, assim é retornado vários resultados correspondentes ao nome que é q passado, em seguida é feito um for para executar a função mostrar em todos os filmes do array retornado pela api
 
 
-function mostrar(objeto){
+// function mostrar(objeto){
         
             
-            if(objeto.Type!='game'){
-                if(objeto.Poster=='N/A'){
-                    imagem.innerHTML+=`
-                <div class="col-md-3">
-                <div class='well text-center'>
-                <div>Imagem não encontrada</div>
-                <h5>${objeto.Title}</h5> 
-                <p><button type="button" class="btn btn-primary">Detalhes</button></p>
-                </div>
-                </div>`}
+//             if(objeto.Type!='game'){
+//                 if(objeto.Poster=='N/A'){
+//                     imagem.innerHTML+=`
+//                 <div class="col-md-3">
+//                 <div class='well text-center'>
+//                 <div>Imagem não encontrada</div>
+//                 <h5>${objeto.Title}</h5> 
+//                 <p><button type="button" class="btn btn-primary">Detalhes</button></p>
+//                 </div>
+//                 </div>`}
                     
                
-                else{
+//                 else{
                 
-                imagem.innerHTML+=`
-                <div class="col-md-3">
-                <div class='well text-center'>
-                <img src="${objeto.Poster}" alt="${objeto.Title}" height='300'>
-                <h5>${objeto.Title}</h5>                                    
-                <p><button type="button" class="btn btn-primary">Detalhes</button></p>
-                </div>
-                </div>`
-                }
-            }
+//                 imagem.innerHTML+=`
+//                 <div class="col-md-3">
+//                 <div class='well text-center'>
+//                 <img src="${objeto.Poster}" alt="${objeto.Title}" height='300'>
+//                 <h5>${objeto.Title}</h5>                                    
+//                 <p><button type="button" class="btn btn-primary">Detalhes</button></p>
+//                 </div>
+//                 </div>`
+//                 }
+//             }
             
             
-        }
+//         }
         
             // console.log('errou')
             // imagem.innerHTML='<h2>Filme não encontrado</h2>'
