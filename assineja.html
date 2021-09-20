@@ -21,107 +21,175 @@
   <script src="pesquisa.js" defer></script>
   <script src="validacoes.js" defer></script>
   <style>
+
     body {
       background-color: rgb(46, 45, 45);
+      display: flex;
+      flex-direction: column;
     }
-    .form-inline{
-      background-color: whitesmoke;
+
+    header {
+      display: flex;
+      justify-items: content;
+      border-radius: 100px;
+      box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(248, 147, 14);
+      width: 98%;
+      position: fixed;
+
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    #form-inline {
+      background-color: #212529;
       border-radius: 10px;
+      margin-top: 100px;
     }
- 
 
-  h2 {
-    color: whitesmoke;
-    text-align: center ;
-    
-  }
+    .container1 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-#nome, #number, #email, #email1, #text, #password, #cidade, #cep, #bairro, #rua, #numero, #complemento{
-border-radius: 5px;
-}
+    }
 
+    #nome,
+    #number,
+    #email,
+    #email1,
+    #text,
+    #password,
+    #cidade,
+    #cep,
+    #bairro,
+    #rua,
+    #numero,
+    #complemento, #number {
+      border-radius: 5px;
+    }
 
-  .cadastrar {
-    background-color: #FFC107;
-    font-size: 20px;
-    width: 180px;
-  }
+    label {
+      color: whitesmoke;
+    }
+
+    .cadastrar {
+      background-color: #FFC107;
+      font-size: 20px;
+      width: 180px;
+    }
   </style>
 </head>
 
 <body>
-  <h2>Cadastra-se na ResiliaFlix:</h2>
+  <div class="b-example-divider"></div>
+  <header class="p-3 bg-dark text-white">
+    <div class="container1">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <img class="logo" src="poplogo.png" alt="logo">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Filmes</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Minha lista</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Assista de novo</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Contato</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..."
+            aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Assine</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
 
   
-  <div class="form-inline">
+  <div id="form-inline" class="form-inline">
+    <h2>Assiner Pop Corn +!</h2>
 
     <div class="inputacima">
-      <label for="nome">Nome:</label>     
-    <input id="nome" type="text" placeholder="Digite seu Nome">
-    <label for="number">RG:</label>
-        <input type="number" placeholder="XX.XXX.XXX-X">
-        <label for="email">E-mail:</label>
-    <input id="email1" type="email" placeholder="Digite seu e-mail">
-  </div> 
-  
-  
-  <div>
-    <label for="password">Senha:</label>
-    <input id="password" type="password" placeholder="Digite sua senha">
-    <label for="text">Confirme sua senha:</label>
-    <input id="password" type="password" placeholder="Senha">
-    <label for="cep">CEP</label>
-   <input id="cep" type="number" re />
-   <label for="cidade">Cidade</label>
-    <input id="cidade" type="text" required />
+      <label for="nome">Nome:</label>
+      <input id="nome" type="text" placeholder="Digite seu Nome">
+      <label for="number">RG:</label>
+      <input type="number" placeholder="XX.XXX.XXX-X">
+      <label for="email">E-mail:</label>
+      <input id="email1" type="email" placeholder="Digite seu e-mail">
     </div>
-<div id="selecione">
-    <label for="uf">Estado</label>
+
+
+    <div>
+      <label for="password">Senha:</label>
+      <input id="password" type="password" placeholder="Digite sua senha">
+      <label for="text">Confirme sua senha:</label>
+      <input id="password" type="password" placeholder="Senha">
+      <label for="cep">CEP</label>
+      <input id="cep" type="number" re />
+      <label for="cidade">Cidade</label>
+      <input id="cidade" type="text" required />
+    </div>
+    <div id="selecione">
+      <label for="uf">Estado</label>
       <select id="uf">
-      <option value="AC">Acre</option>
-      <option value="AL">Alagoas</option>
-      <option value="AP">Amapá</option>
-      <option value="AM">Amazonas</option>
-      <option value="BA">Bahia</option>
-      <option value="CE">Ceará</option>
-      <option value="DF">Distrito Federal</option>
-      <option value="ES">Espírito Santo</option>
-      <option value="GO">Goiás</option>
-      <option value="MA">Maranhão</option>
-      <option value="MT">Mato Grosso</option>
-      <option value="MS">Mato Grosso do Sul</option>
-      <option value="MG">Minas Gerais</option>
-      <option value="PA">Pará</option>
-      <option value="PB">Paraíba</option>
-      <option value="PR">Paraná</option>
-      <option value="PE">Pernambuco</option>
-      <option value="PI">Piauí</option>
-      <option value="RJ">Rio de Janeiro</option>
-      <option value="RN">Rio Grande do Norte</option>
-      <option value="RS">Rio Grande do Sul</option>
-      <option value="RO">Rondônia</option>
-      <option value="RR">Roraima</option>
-      <option value="SC">Santa Catarina</option>
-      <option value="SP">São Paulo</option>
-      <option value="SE">Sergipe</option>
-      <option value="TO">Tocantins</option>
-    </select>
-    <label for="bairro">Bairro</label>
-    <input id="bairro" type="text" required />
-    <label for="rua">Rua</label>
-    <input id="rua" type="text" required />
-     <label for="numero">Número</label>
-    <input id="numero" type="text" />
-     <label for="complemento">Complemento</label>
-    <input id="complemento" type="text" />
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+      <label for="bairro">Bairro</label>
+      <input id="bairro" type="text" required />
+      <label for="rua">Rua</label>
+      <input id="rua" type="text" required />
+      <label for="numero">Número</label>
+      <input id="numero" type="text" />
+      <label for="complemento">Complemento</label>
+      <input id="complemento" type="text" />
     </div>
     <br>
-  <div id="botao">
-    <input type="submit" name="botao" value="CADASTRAR" class="cadastrar" />  
- </div>
-           
+    <div id="botao">
+      <input type="submit" name="botao" value="CADASTRAR" class="cadastrar" />
+    </div>
+
   </div>
- 
+
 
 
 
