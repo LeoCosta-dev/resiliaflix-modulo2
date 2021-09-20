@@ -58,7 +58,9 @@ document.getElementById('home').addEventListener('click', ()=>{
 document.getElementById('filmes').addEventListener('click', ()=>{
     location.replace('pesquisa.html')
 })
-$('#MinhaLista')
+document.getElementById('assine').addEventListener('click', ()=>{
+    location.replace('assineja.html')
+})
 document.getElementById('contato').addEventListener('click', ()=>{
     location.replace('pesquisa.html')
 })
