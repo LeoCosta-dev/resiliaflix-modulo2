@@ -3,12 +3,6 @@ let imagem=document.querySelector('#imagem')
 // let botao=document.querySelector('#btn')
 let texto=document.querySelector('#input')
 
-
-
-
-    
-
-
 //ao pesquisar um título apenas ele centraliza o titulo e quebra a linha, nao busqui alguma forma de resolver ainda, acho que é coisa do bootstrap que coloquei
 
 // ao clicar no botao é feita a requisição com o parâmetro s da Api, assim é retornado vários resultados correspondentes ao nome que é q passado, em seguida é feito um for para executar a função mostrar em todos os filmes do array retornado pela api
