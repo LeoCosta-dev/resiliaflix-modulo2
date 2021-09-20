@@ -20,13 +20,42 @@
   <script src="cep.js" defer></script>
   <script src="pesquisa.js" defer></script>
   <script src="validacoes.js" defer></script>
+  <style>
+    body {
+      background-color: rgb(46, 45, 45);
+    }
+    .form-inline{
+      background-color: whitesmoke;
+      border-radius: 10px;
+    }
+ 
+
+  h2 {
+    color: whitesmoke;
+    text-align: center ;
+    
+  }
+
+#nome, #number, #email, #email1, #text, #password, #cidade, #cep, #bairro, #rua, #numero, #complemento{
+border-radius: 5px;
+}
+
+
+  .cadastrar {
+    background-color: #FFC107;
+    font-size: 20px;
+    width: 180px;
+  }
+  </style>
 </head>
 
 <body>
-  <p> Crie uma conta na Resilia Flix</p>
+  <h2>Cadastra-se na ResiliaFlix:</h2>
+
+  
   <div class="form-inline">
 
-    <div>
+    <div class="inputacima">
       <label for="nome">Nome:</label>     
     <input id="nome" type="text" placeholder="Digite seu Nome">
     <label for="number">RG:</label>
@@ -46,7 +75,7 @@
    <label for="cidade">Cidade</label>
     <input id="cidade" type="text" required />
     </div>
-<div>
+<div id="selecione">
     <label for="uf">Estado</label>
       <select id="uf">
       <option value="AC">Acre</option>
@@ -86,6 +115,7 @@
      <label for="complemento">Complemento</label>
     <input id="complemento" type="text" />
     </div>
+    <br>
   <div id="botao">
     <input type="submit" name="botao" value="CADASTRAR" class="cadastrar" />  
  </div>
