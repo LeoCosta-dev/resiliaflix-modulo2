@@ -25,14 +25,19 @@ texto.addEventListener('keyup',function(){
                     console.log(response)
 
                     imagem.innerHTML=''
-                    if(response['Response']=='False'){
-                     imagem.innerHTML='<h2>Filme não encontrado</h2>'
+                    if(texto.value == ''){
+                        imagem.style.display = 'none'
+                    }
+                    else if(response['Response']=='False'){
+                        imagem.style.display = 'flex'
+                        imagem.innerHTML='<h2>Filme não encontrado</h2>'
                     }
                     else{
-                   for(let i=0;i<response['Search'].length;i++)
-                   
-                    mostrar(response['Search'][i])
-                   }
+                        imagem.style.display = 'flex'
+                        for(let i=0;i<response['Search'].length;i++)
+                        
+                            mostrar(response['Search'][i])
+                        }
                     
 
                 }
