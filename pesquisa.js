@@ -1,6 +1,6 @@
 // capturando as tags da imagem do botao e da entrada de texto 
 let imagem=document.querySelector('#imagem')
-// let botao=document.querySelector('#btn')
+let botao=document.querySelector('#buton')
 let texto=document.querySelector('#input')
 
 //ao pesquisar um título apenas ele centraliza o titulo e quebra a linha, nao busqui alguma forma de resolver ainda, acho que é coisa do bootstrap que coloquei
@@ -12,12 +12,12 @@ let texto=document.querySelector('#input')
 
 
 
-
+imagem.style.display = 'none'
 texto.addEventListener('keyup',function(){
 
              $.ajax({
                 
-                url: `http://www.omdbapi.com/?s=${texto.value}&apikey=e1026f57`,
+                url: `https://www.omdbapi.com/?s=${texto.value}&apikey=e1026f57`,
                 method: "get",
                
                 success: (response)=>{
@@ -25,19 +25,30 @@ texto.addEventListener('keyup',function(){
                     console.log(response)
 
                     imagem.innerHTML=''
-                    if(response['Response']=='False'){
+                    if(texto.value == ''){
+                        imagem.style.display = 'none'
+                    }
+                    else if(response['Response']=='False'){
+                      imagem.style.display = 'flex'
                      imagem.innerHTML='<h2>Filme não encontrado</h2>'
                     }
                     else{
+                    imagem.style.display = 'flex'
                    for(let i=0;i<response['Search'].length;i++)
                    
                     mostrar(response['Search'][i])
+
                    }
                     
 
                 }
                
                         })
+                        
+
+
+
+
                         
 })
 
@@ -59,26 +70,75 @@ function mostrar(objeto){
                
                 else{
                 
-                imagem.innerHTML+=`
-                <div class="col-md-3">
-                <div class='well text-center'>
-                <img src="${objeto.Poster}" alt="${objeto.Title}" height='300'>
-                <h5>${objeto.Title}</h5>                                    
-                <p><button type="button" class="btn btn-primary">Detalhes</button></p>
-                </div>
-                </div>`
+                //   console.log(objeto.imdbID)
+                
+                modal(objeto.imdbID)  
+                
+                // imagem.innerHTML+=`
+                // <div class="col-md-3">
+                // <div class='well text-center'>
+                // <img src="${objeto.Poster}" alt="${objeto.Title}" height='300'>
+                // <h5>${objeto.Title}</h5>                                    
+                // <p><button type="button" class="buton btn-primary">Detalhes</button></p>
+                // </div>
+                // </div>`
+
+                // botao.addEventListener('click',modal(objeto.imdbID))
                 }
             }
             
             
         }
         
-            // console.log('errou')
-            // imagem.innerHTML='<h2>Filme não encontrado</h2>'
-            
-        // }
+         
     
-        // }
+//  função q que vai requisitar um novo parametro da api e vai colocar um modal em todos os filmes
 
-    
- 
+function modal(param){
+  $.ajax({
+          
+      url: `http://www.omdbapi.com/?i=${param}&apikey=e1026f57`,
+      method: "post",
+      success: (response)=>{
+      
+
+      imagem.innerHTML+=
+      `<div class="col-md-3">
+      <div class='well text-center'>
+      <img src="${response.Poster}" alt="${response.Title}" height='300'>
+      <h5>${response.Title}</h5> 
+      <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+      Detalhes
+      </button></p>
+      
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLongTitle">${response.Title}</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+<img src="${response.Poster}" alt="${response.Title}" height='200'>
+<p>Ano: ${response.Year}</p>
+<p>Duração: ${response.Runtime}</p>
+<p>Gênero: ${response.Genre}</p>
+<p>Diretor: ${response.Director}</p>
+<p>Sinopse: ${response.Plot}</p>
+
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+  
+</div>
+</div>
+</div>
+</div>
+      </div>
+      </div>`          }
+           
+    })
+
+}
