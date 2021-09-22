@@ -91,6 +91,7 @@
 
 <body>
   <div class="b-example-divider"></div>
+
   <header class="p-3 bg-dark text-white">
     <div class="container1">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -104,17 +105,16 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li id="home"><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
           <li id="filmes"><a href="#" class="nav-link px-2 text-white">Filmes</a></li>
-          <li id="minhaLista"><a href="#" class="nav-link px-2 text-white">Minha lista</a></li>
           <li id="contato"><a href="#" class="nav-link px-2 text-white">Contato</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..."
+          <input id="redirecionar" type="search" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..."
             aria-label="Search">
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button id="login" type="button" class="btn btn-outline-light me-2">Login</button>
           <button id="assine" type="button" class="btn btn-warning">Assine</button>
         </div>
       </div>
@@ -132,7 +132,7 @@
       <label for="number">RG:</label>
       <input type="number" placeholder="XX.XXX.XXX-X">
       <label for="email">E-mail:</label>
-      <input id="email1" type="email" placeholder="Digite seu e-mail">
+      <input id="email" type="email" placeholder="Digite seu e-mail">
     </div>
 
 

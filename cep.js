@@ -1,5 +1,5 @@
 if (document.getElementById("cep")) {
-    let cep = document.getElementById("cep")
+    const cep = document.getElementById("cep")
     let reset
 
     cep.addEventListener("blur", () => {
