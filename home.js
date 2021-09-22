@@ -53,7 +53,7 @@ var Catalogo=['tt0271383','tt0180093','tt0212985','tt1753722','tt1057500','tt006
 
     
             
-            // imagem.height='300'   nao funcionou não sei porque????, coloquei na div
+            
 
             }
            

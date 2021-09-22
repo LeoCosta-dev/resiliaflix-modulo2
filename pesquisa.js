@@ -13,11 +13,11 @@ texto.addEventListener('keyup',function(){
              $.ajax({
                 
                 url: `https://www.omdbapi.com/?s=${texto.value}&apikey=82aa4d9d`,
-                method: "get",
+                method: "post",
                
                 success: (response)=>{
                     
-                    console.log(response)
+                    // console.log(response)
 
                     imagem.innerHTML=''
                     if(texto.value == ''){
@@ -67,9 +67,9 @@ function mostrar(objeto){
                 // <div class='well text-center'>
                 // <img src="${objeto.Poster}" alt="${objeto.Title}" height='300'>
                 // <h5>${objeto.Title}</h5>                                    
-                // <p><button type="button" class="btn btn-primary" id='buton' onclick()>Detalhes</button></p>
-                // </div>
-                // `
+                // <p><button type="button" class="btn btn-primary" id='buton' onClick='modal(objeto.imdbID)'>Detalhes</button></p>
+                // </div>`
+                
                 modal(objeto.imdbID)
                   // botao.addEventListener('click',modal(objeto.imdbID))
                 }
@@ -81,16 +81,14 @@ function mostrar(objeto){
 //  função q que vai requisitar um novo parametro da api e vai colocar um modal em todos os filmes
 
 function modal(param){
-  console.log('aaa')
+  
   $.ajax({
           
       url: `https://www.omdbapi.com/?i=${param}&apikey=82aa4d9d`,
       method: "post",
       success: (response)=>{
-      
-      
-      
-                imagem.innerHTML+=
+        console.log(response)
+                      imagem.innerHTML+=
             `<div class="col-md-3">
             <div class='well text-center'>
             <img src="${response.Poster}" alt="${response.Title}" height='300'>
@@ -125,8 +123,14 @@ function modal(param){
   </div>
 </div>
             </div>
-            </div>`         }
+            </div>`
+
+    
+            
+            
+
+            }
            
-    })
+                    })
 
 }
