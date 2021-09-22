@@ -11,10 +11,17 @@ for (let i = 0; i < Catalogo.length; i++) {
     method: "post",
     success: (response) => {
       console.log(response)
-      carrossel.innerHTML +=
-        `<div class="carousel-item active">
+      if(i == 0){
+        carrossel.innerHTML +=
+          `<div class="carousel-item active">
             <img src="${response.Poster}" class="d-block w-100" alt="Filme 1">
           </div>`
+      }else{
+        carrossel.innerHTML +=
+          `<div class="carousel-item">
+            <img src="${response.Poster}" class="d-block w-100" alt="Filme 1">
+          </div>`
+      }
     }
 
   })

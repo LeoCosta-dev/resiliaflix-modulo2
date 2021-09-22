@@ -20,8 +20,8 @@ if (document.getElementById("cep")) {
 }
 
 const inputEmail = document.getElementById('email')
-if (inputEmail) {
-    document.getElementById('recupera').addEventListener('click', (event) => {
+if (inputEmail && document.getElementById('recupera')) {
+    document.getElementById('recupera').addEventListener('clicks', (event) => {
         event.preventDefault()
         let validaEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i
         if (validaEmail.test(inputEmail.value)) {
@@ -52,4 +52,14 @@ if (inputEmail) {
     })
 }
 
-
+if(inputEmail && cep){
+    inputEmail.addEventListener('blur', ()=>{
+        console.log("paçoca");
+        let validaEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i
+        if(validaEmail.test(inputEmail.value)){
+            inputEmail.style.color = "green"
+        }else{
+            inputEmail.style.color = "red"
+        }
+    })
+}
