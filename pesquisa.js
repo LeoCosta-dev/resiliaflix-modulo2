@@ -70,7 +70,7 @@ function mostrar(objeto){
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        Launch static backdrop modal
+        Detalhes
       </button></p>
                 </div>
                 </div>`
@@ -94,7 +94,7 @@ function mostrar(objeto){
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        Launch static backdrop modal
+        Detalhes
       </button></p>
                 </div>`
                 
@@ -169,9 +169,11 @@ function add_modal(param){
       method: "post",
       success: (response)=>{
         console.log(response)
-                year.innerHTML=response.Year
-                gender.innerHTML=response.Genre
-
+                title.innerHTML=response.Title
+                year.innerHTML=`Ano: ${response.Year}`
+                gender.innerHTML=`Gênero: ${response.Genre}`
+                plot.innerHTML=`Sinopse: ${response.Plot}`
+                imgpost.setAttribute('src',`${response.Poster}`)
 
  
 
