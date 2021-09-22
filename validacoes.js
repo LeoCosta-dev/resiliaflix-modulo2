@@ -52,7 +52,7 @@ if (inputEmail && document.getElementById('recupera')) {
     })
 }
 
-if(inputEmail && cep){
+if(inputEmail && document.getElementById("cep")){
     inputEmail.addEventListener('blur', ()=>{
         console.log("paçoca");
         let validaEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i
