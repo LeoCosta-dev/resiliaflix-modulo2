@@ -24,7 +24,7 @@ var Catalogo=['tt0271383','tt0180093','tt0212985','tt1753722','tt1057500','tt006
             </button></p>
             
             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document" id="{${i}}">
+  <div class="modal-dialog" role="document" >
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">${response.Title}</h5>
