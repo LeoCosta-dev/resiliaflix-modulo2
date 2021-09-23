@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResiliaFlix | Catálogo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <style> 
+    .container{
+        padding-top: 150px;
+     }
+     
+     header{
+        background-color: rgb(46, 45, 45);
+     }
+     #imagem{
+      display: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 90%;
+      padding: 10px;
+      border-radius: 20px;
+     }
+     /*#imagem:empty{
+       display:none;
+     }*/
+     h2,h5{
+       color: white;
+     }
+     #erro{
+       color: red;
+       height: 300px;
+       background-image:url(/Imagens/poplogo.png);
+     }
+     header{
+       position:static;
+     }
+     .modal-content{
+       background-color:grey
+     }
+    </style>
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+    
+    <script src="../JS/cep.js" defer></script>
+    
+    <script src="../JS/validacoes.js" defer></script>
+    <script src="../JS/eventos.js" defer></script>
+ 
+</head>
+<body>
+  <div class="b-example-divider"></div>
+
+  <header class="p-3 bg-dark text-white">
+    <div class="container1">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+       <a href="../index.html"><img class="logo" src="../Imagens/poplogo.png" alt="logo"></a> 
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li id="home"><a href="../index.html" class="nav-link px-2 text-secondary">Home</a></li>
+          <li id="filmes"><a href="../HTML/pesquisa.html" class="nav-link px-2 text-white">Filmes</a></li>
+          <li id="contato"><a href="../HTML/contato.html" class="nav-link px-2 text-white">Contato</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input id="input" type="search" class="form-control form-control-dark" placeholder="Títulos, personagens e gênero..."
+            aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button id="login" type="button" class="btn btn-outline-light me-2">Login</button>
+          <button id="assine" type="button" class="btn btn-warning"><a href="assineja.html">Assine</a></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+   
+    <div class='container'>
+
+    </div>
+    <div id='imagem' class='row'>
+       
+    </div>
+    <div class="modal"
+    id="modal"
+  
+    tabindex="-1"
+   
+    >
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id='title' ></h4>
+              <button type="button" class="close" data-dismiss="modal" onclick='closemodel()'>&times;</button>
+              
+
+            </div>
+            <div class="modal-body">
+              <img src='' alt='' height='200' id='imgpost'>
+      <p id='year'></p>
+      <p id='runtime'></p>
+      <p id='gender'></p>
+      <p id='director'></p>
+      <p id='plot'></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal"  onclick='closemodel()'>Close </button>
+            </div>
+          </div>
+       </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+  <script src="../JS/pesquisa.js" defer></script>
+</body>
+</html>
