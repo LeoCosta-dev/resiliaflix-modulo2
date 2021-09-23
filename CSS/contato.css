@@ -1,17 +1,40 @@
 body{
-    background-color: rgb(46, 45, 45);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-    
-}
+        background-color: rgb(46, 45, 45);
+        display: flex;
+        flex-direction: column;
+      }
 
 header{
 border-radius: 100px;
 box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(248, 147, 14);
 width: 98%;
 position: fixed;
+}
+
+.main{
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    width: 950px;
+    height: 800;
+    background-color: #212529;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    /*size: 10px;
+    justify-content: center;
+    align-items: center;
+    column-count: 3;
+    margin: 0 auto;
+    flex-direction: column;*/
+
+}
+
+p{
+    text-align: center;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin: 13px 0px;
 }
 
 .container1{
@@ -27,7 +50,60 @@ position: fixed;
 .logo{
     width: 100px;
 }
+    
+.flex-container{
+    
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-between;
+}
+
+.desenvolvedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 33%;
+    
+
+}
+
+    .flex-container2{
+        display: flex;
+        margin-top: 5%;
+    }
+    
+    .luana{
+        width: 205px;
+        height: 205px;
+        border-radius: 15px;
+          
+    }
+    .alexandre{
+        width: 205px;
+        height: 205px;
+        border-radius: 15px;
         
+<<<<<<< HEAD
+    }
+    .tainara{
+        width: 205px;
+        height: 205px;
+        border-radius: 15px;
+    }
+    .leonardo{
+            width: 205px;
+            height: 205px;
+            border-radius: 15px;
+    }
+    .murilo{
+        width: 205px;
+        height: 205px;
+        border-radius: 15px;
+    }
+    
+       
+=======
 #container-imagem {
     position:static;
     height: 100vh;
@@ -37,3 +113,9 @@ position: fixed;
     background-size: cover;
     background-position: center;
 }
+#rodape {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+>>>>>>> 064a832b2e2950ca356c2be5c0cd5dc2ee28c6bb
