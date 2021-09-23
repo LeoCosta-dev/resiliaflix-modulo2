@@ -15,6 +15,7 @@ for (let i = 0; i < Catalogo.length; i++) {
         carrossel.innerHTML +=
           `<div class="carousel-item active">
             <img src="${response.Poster}" class="d-block w-100" alt="Filme 1">
+            <p>${response.Plot}</p>
           </div>`
       }else{
         carrossel.innerHTML +=
@@ -27,7 +28,6 @@ for (let i = 0; i < Catalogo.length; i++) {
   })
 
 }
-
 
 
 
