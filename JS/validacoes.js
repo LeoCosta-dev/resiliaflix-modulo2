@@ -21,12 +21,13 @@ if (document.getElementById("cep")) {
 
 const inputEmail = document.getElementById('email')
 if (inputEmail && document.getElementById('recupera')) {
-    document.getElementById('recupera').addEventListener('clicks', (event) => {
+    document.getElementById('recupera').addEventListener('click', (event) => {
         event.preventDefault()
         let validaEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i
         if (validaEmail.test(inputEmail.value)) {
             let mensagem = document.createElement('p')
             mensagem.textContent = 'Link de recuperação enviado para e-mail cadastrado'
+            mensagem.style.color = 'green'
             mensagem.setAttribute('id', 'confirma')
             if (!document.getElementById('confirma')) {
                 document.getElementById('box').appendChild(mensagem)

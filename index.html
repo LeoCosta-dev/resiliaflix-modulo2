@@ -28,6 +28,12 @@
   <script src="./JS/home.js" defer></script>
   <script src="./JS/eventos.js" defer></script>
   <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
     header {
       border-radius: 100px;
       box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(248, 147, 14);
@@ -59,7 +65,7 @@
     .home {
       text-align: center;
       border-radius: 5px;
-          color: white;
+      color: white;
       width: 40%;
       font-size: 150%;
     }
@@ -127,15 +133,39 @@
       border: none;
       color: #212529;
     }
+    
+    .formcontrol {
+      font-size: 15px;
+      text-align: center;
+      width: 200px;
+      padding:8px ;
+      border-radius: 6px;
+     
+    }
+   
 
+    #acesso{
+      width: 50px;
+      background-color: #FFC107;
+      font-size: 20px;
+      width: 150px;
+      border: none;
+      color: #212529;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    
     input {
       width: 300px;
       padding: 8px;
       border-radius: 7px;
-      border: none
+      border: none;
+      
     }
 
-   
+
+
     #rodape {
       width: 100%;
       text-align: center;
@@ -181,11 +211,22 @@
   <section>
 
     <div class="home">
-      
-      <p>
+      <h2>Assista a Filmes e Séries </h2>
+      <p id="descricao">
         Estreias de filmes, clássicos e sagas, suas séries favoritas e lançamentos exclusivos,
-        comédias animadas, produções originais e esportes ao vivo com a Pop Corn +.
+        comédias animadas de maneira personalizada com a Pop Corn+ .
       </p>
+
+      <div class="valores">
+        <p id="pague">Pague o quanto puder:</p>
+        <input type="number" class="formcontrol" placeholder="Digite seu valor em R$">
+        <a href="./HTML/assineja.html"><button id="acesso" type="button"> Personalizar </button></a>
+
+       
+        
+
+      </div>
+
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">

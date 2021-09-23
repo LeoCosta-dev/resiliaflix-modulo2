@@ -35,13 +35,16 @@ if(imagem){
                       imagem.innerHTML=''
                       if(texto.value == ''){
                           imagem.style.display = 'none'
+                          document.getElementById("tapaburaco").style.display="flex"
                       }
                       else if(response['Response']=='False'){
                         imagem.style.display = 'flex'
+                        document.getElementById("tapaburaco").style.display="none"
                        imagem.innerHTML='<h2>Filme não encontrado</h2>'
                       }
                       else{
                       imagem.style.display = 'flex'
+                      document.getElementById("tapaburaco").style.display="none"
                      for(let i=0;i<response['Search'].length;i++)
                      
                       mostrar(response['Search'][i])
