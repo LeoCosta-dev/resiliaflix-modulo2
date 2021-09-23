@@ -25,7 +25,7 @@ if(imagem){
   
                $.ajax({
                   
-                  url: `https://www.omdbapi.com/?s=${texto.value}&apikey=a451b1b9`,
+                  url: `https://www.omdbapi.com/?s=${texto.value}&apikey=82aa4d9d`,
                   method: "post",
                  
                   success: (response)=>{
@@ -113,7 +113,7 @@ if(imagem){
     
     $.ajax({
             
-        url: `https://www.omdbapi.com/?i=${param}&apikey=a451b1b9`,
+        url: `https://www.omdbapi.com/?i=${param}&apikey=82aa4d9d`,
         method: "post",
         success: (response)=>{
           console.log(response)
@@ -166,7 +166,7 @@ if(imagem){
   
     $.ajax({
             
-        url: `https://www.omdbapi.com/?i=${param}&apikey=a451b1b9`,
+        url: `https://www.omdbapi.com/?i=${param}&apikey=82aa4d9d`,
         method: "post",
         success: (response)=>{
           console.log(response)
