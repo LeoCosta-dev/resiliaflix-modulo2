@@ -22,6 +22,7 @@
   <script src="../JS/validacoes.js" defer></script>
   <script src="../JS/eventos.js" defer></script>
   <style>
+ 
 
     body {
       background-color: rgb(46, 45, 45);
@@ -68,13 +69,16 @@
     #email1,
     #text,
     #password,
-    #cidade,
     #cep,
-    #bairro,
-    #rua,
     #numero,
     #complemento, #number {
+    border-radius: 5px;
+      
+    }
+    #rua,#cidade, #bairro, #uf {
       border-radius: 5px;
+      background-color: white;
+      color: black;
     }
 
     label {
@@ -83,9 +87,11 @@
 
     .cadastrar {
       background-color: #FFC107;
-      font-size: 20px;
-      width: 180px;
+      font-size: 15px;
+      width: 150px;
+      
     }
+    
   </style>
 </head>
 
@@ -114,8 +120,8 @@
         </form>
 
         <div class="text-end">
-          <button id="login" type="button" class="btn btn-outline-light me-2">Login</button>
-          <button id="assine" type="button" class="btn btn-warning"><a href="assineja.html">Assine</a></button>
+          <a href="login.html"><button id="login" type="button" class="btn btn-outline-light me-2">Login</button></a>
+          <a href="../HTML/assineja.html"><button id="assine" type="button" class="btn btn-warning">Assine</button></a>
         </div>
       </div>
     </div>
@@ -144,57 +150,27 @@
       <label for="cep">CEP</label>
       <input id="cep" type="number" re />
       <label for="cidade">Cidade</label>
-      <input id="cidade" type="text" required />
+      <input id="cidade" type="text" required disabled>
     </div>
-    <div id="selecione">
+    
+     
       <label for="uf">Estado</label>
-      <select id="uf">
-        <option value="AC">Acre</option>
-        <option value="AL">Alagoas</option>
-        <option value="AP">Amapá</option>
-        <option value="AM">Amazonas</option>
-        <option value="BA">Bahia</option>
-        <option value="CE">Ceará</option>
-        <option value="DF">Distrito Federal</option>
-        <option value="ES">Espírito Santo</option>
-        <option value="GO">Goiás</option>
-        <option value="MA">Maranhão</option>
-        <option value="MT">Mato Grosso</option>
-        <option value="MS">Mato Grosso do Sul</option>
-        <option value="MG">Minas Gerais</option>
-        <option value="PA">Pará</option>
-        <option value="PB">Paraíba</option>
-        <option value="PR">Paraná</option>
-        <option value="PE">Pernambuco</option>
-        <option value="PI">Piauí</option>
-        <option value="RJ">Rio de Janeiro</option>
-        <option value="RN">Rio Grande do Norte</option>
-        <option value="RS">Rio Grande do Sul</option>
-        <option value="RO">Rondônia</option>
-        <option value="RR">Roraima</option>
-        <option value="SC">Santa Catarina</option>
-        <option value="SP">São Paulo</option>
-        <option value="SE">Sergipe</option>
-        <option value="TO">Tocantins</option>
-      </select>
+      <input id="uf" type="text" disabled>
       <label for="bairro">Bairro</label>
-      <input id="bairro" type="text" required />
-      <label for="rua">Rua</label>
-      <input id="rua" type="text" required />
+      <input id="bairro" type="text" required disabled>
+      <label for="rua" >Rua</label>
+      <input id="rua" type="text" required disabled>
       <label for="numero">Número</label>
       <input id="numero" type="text" />
       <label for="complemento">Complemento</label>
       <input id="complemento" type="text" />
+      <br>
+      <input id="botao" type="submit" name="botao" value="CADASTRAR" class="cadastrar" />
     </div>
-    <br>
-    <div id="botao">
-      <input type="submit" name="botao" value="CADASTRAR" class="cadastrar" />
-    </div>
-
   </div>
-
-
-
+  <footer class="footer navbar-fixed-bottom">
+    &copy; 2021 Todos os direitos reservados à Resilia Educação.    
+  </footer>
 
 </body>
 
