@@ -92,3 +92,8 @@ input[input=submit]:hover{
     background-color:yellow;
     font-size: 18px;
 }
+#rodape {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
