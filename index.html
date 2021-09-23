@@ -39,7 +39,7 @@
       box-shadow: inset 0 0 1em rgb(231, 199, 18), 0 0 2em rgb(248, 147, 14);
       width: 98%;
       position: fixed;
-      z-index: 1000;
+      z-index: 2001;
     }
 
 
@@ -72,41 +72,36 @@
 
     .slide {
       display: flex;
-      width: 40%;
-      height: 600px;
+      width: 60%;
+      height: 900px;
       margin-left: 10%;
       object-fit: cover;
       color:white;
       text-align:center;
-      
-      
-
     }
 
-    figure{
-      
-     background-repeat: no-repeat !important;
-    
-    }
 
     .poster{
       display:flex;
       height:10%;
-
+      background-repeat: no-repeat;
+      background-size:contain;
+    }
+    h5{
+      font-size: 1.5em;
     }
 
     .escopo{
-      width: 40%;
-      
-      margin-left: 10%;
+      width: 100%;
+      height: 900px;    
       object-fit: cover;
+      padding: 10%;
+      font-size: 2em;
       color:white;
       text-align:center;
-      display: flex;
-      width: 53%;     
+      display: none;      
       flex-direction:column;
       background-color:rgba(0,0,0,0.7);
-      z-index:2000;
       margin-bottom:1200px;
       overflow:visible;
     }
@@ -221,10 +216,6 @@
         <p id="pague">Pague o quanto puder:</p>
         <input type="number" class="formcontrol" placeholder="Digite seu valor em R$">
         <a href="./HTML/assineja.html"><button id="acesso" type="button"> Personalizar </button></a>
-
-       
-        
-
       </div>
 
     </div>
