@@ -14,12 +14,22 @@ for (let i = 0; i < Catalogo.length; i++) {
       if(i == 0){
         carrossel.innerHTML +=
           `<div class="carousel-item active">
-            <img src="${response.Poster}" class="d-block w-100" alt="Filme 1">
+            <figure class='poster' style="background:url(${response.Poster})" class="d-block w-100" alt="Filme 1">
+            <div class='escopo'>
+            <h5 >${response.Title}</h5>
+            <p>${response.Plot}</p>
+            </figure>
+            </div>
           </div>`
       }else{
         carrossel.innerHTML +=
           `<div class="carousel-item">
-            <img src="${response.Poster}" class="d-block w-100" alt="Filme 1">
+            <figure class='poster' style="background:url(${response.Poster})" class="d-block w-100" alt="Filme 1">
+            <div class='escopo'>
+            <h5 >${response.Title}</h5>
+            <p>${response.Plot}</p>
+            </figure>
+            </div>
           </div>`
       }
     }
