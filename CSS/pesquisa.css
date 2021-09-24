@@ -1,0 +1,36 @@
+.container{
+    padding-top: 150px;
+ }
+ 
+ header{
+    background-color: rgb(46, 45, 45);
+ }
+ #imagem{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+ }
+ /*#imagem:empty{
+   display:none;
+ }*/
+ h2,h5{
+   color: white;
+ }
+ #erro{
+   color: red;
+   height: 300px;
+   background-image:url(/Imagens/poplogo.png);
+ }
+ header{
+   position:static;
+ }
+ .modal-content{
+   background-color:grey
+ }
+ #rodape {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
