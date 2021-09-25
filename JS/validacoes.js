@@ -27,8 +27,6 @@ function senha(){
             document.getElementById('password2').style.color = 'black'
             document.getElementById('password').style.borderColor = 'black'
             document.getElementById('password').style.color = 'black'
-        if(document.getElementById('password2').value === '' || document.getElementById('password').value === ''){
-            semConfirmar()
         }else if(document.getElementById('password2').value === document.getElementById('password').value){
             document.getElementById('password2').style.borderColor = 'green'
             document.getElementById('password2').style.color = 'green'
@@ -42,7 +40,7 @@ function senha(){
     }
 
    
-}
+
 
 
 
